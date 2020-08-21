@@ -7,7 +7,7 @@ class Config:
     def __init__(self):
         self.cp=ConfigParser()
         #path=os.path.join(os.path.abspath(os.path.dirname('.')),'db.cfg')
-        path=r"D:\work_space\python_space\interface-test\config\db.cfg"
+        path=r"D:\work_space\python_space\interface-test\interface-test\config\db.cfg"
         #print(path)
         self.cp.read(path)
     def interface_db(self):

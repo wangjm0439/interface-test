@@ -6,9 +6,11 @@ import os
 
 def read_excel():
     try:
-        workbook=xlrd.open_workbook(filename=r"D:\work_space\python_space\interface-test\run\uploads\interfacedata.xlsx")
+        #workbooks =os.getcwd()
+        #print(workbooks)
+        workbook=xlrd.open_workbook(filename=r"D:\work_space\python_space\interface-test\interface-test\run\uploads\interfacedata.xlsx")
     except:
-        workbook = xlrd.open_workbook(filename=r"D:\work_space\python_space\interface-test\run\uploads\interfacedata.xls")
+        workbook = xlrd.open_workbook(filename=r"D:\work_space\python_space\interface-test\interface-test\run\uploads\interfacedata.xls")
     table=workbook.sheet_by_index(0)
     #print(table)
     row=table.nrows

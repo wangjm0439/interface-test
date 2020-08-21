@@ -8,7 +8,7 @@ from util.read_Excel import *
 
 app = Flask(__name__)
 
-upload_file = r"D:\work_space\python_space\interface-test\run\uploads"#保存文件路径
+upload_file = r"D:\work_space\python_space\interface-test\interface-test\run\uploads"#保存文件路径
 #upload_file =os.path.join(os.path.abspath(os.path.dirname('.')),"run","upload")
 app.config['UPLOAD_FOLDER'] = upload_file
 allow_file = {'xlsx','xls'} #允许上传的文件类型
@@ -28,7 +28,7 @@ def interface():
 def allow_file_type(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in allow_file
 
-@app.route('/uploadfile',methods=['POST',"GET"])
+@app.route('/uploadfile/',methods=['POST',"GET"])
 def upload():
     if request.method == 'POST':
         file=request.files["myf"]#前端页面对应的name属性值
@@ -39,7 +39,9 @@ def upload():
             return "<html><p>导入成功</p><a href='interfaceList'>返回待请求接口列表</a></html>"
     return render_template('error.html', result=())
 
-
+@app.route('/downloadfile',methods=['GET'])
+def download_file():
+    return send_from_directory(r'D:\work_space\python_space\interface-test\interface-test\util\excel',filename='interfacedata.xlsx',as_attachment=True)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', debug=True, port="8888")
