@@ -24,3 +24,6 @@ def read_excel():
 
 if __name__=="__main__":
     read_excel()
+    #path1=os.getcwd()
+    #print(path1 + "/run/uploads/interfacedata.xlsx")
+    os.path.dirname(".")

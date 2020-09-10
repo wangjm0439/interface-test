@@ -19,6 +19,7 @@ class Oper_sql:
         self.db.commit()
 
     def select_interfaceinfo(self):
+        '''查询展示interfaceinfo'''
         sql="select * from interfaceInfo"
         self.cursor.execute(sql)
         data=self.cursor.fetchall()
@@ -26,19 +27,23 @@ class Oper_sql:
         self.db.commit()
         return data
 
+    def del_interfaceinfo(self,id):
+        '''删除'''
+        sql="delete from interfaceInfo where id='{0}'".format(id)
+        self.cursor.execute(sql)
+        self.db.commit()
+
+    def sel_id_interfaceifo(self,id):
+        sql="select * from interfaceInfo where id='{0}'".format(id)
+        self.cursor.execute(sql)
+        data=self.cursor.fetchall()
+        print(data[0])
+        return data[0]
+
 if __name__=="__main__":
     a=Oper_sql()
-    intername="123"
-    interaddr="http://10.100.30.27:8079/withdraw/send"
-    header="yy"
-    param="hh"
-    option="tt"
-    author="yy"
-    descp="yy"
-    expected="yy"
-    account="yy"
-    #a.insert_interfaceinfo(intername,interaddr,header,param,option,author, descp, expected, account)
-    a.select_interfaceinfo()
+    #a.del_interfaceinfo(23)
+    a.sel_id_interfaceifo(29)
 
 
 

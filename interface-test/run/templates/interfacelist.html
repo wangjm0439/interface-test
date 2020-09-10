@@ -112,7 +112,7 @@
 <form action="/delinterface" method="get">
 {% for i in result[0] %}
 <tr>
-<td class="interId">{{i[0]}}</td><td class="interMode">{{i[1]}}</td><th class="interDesc">{{i[8]}}</th><td class="interResult"  title="{{i[2]}}">{{i[2]}}</td><td class="interParam">{{i[3]}}</td><td><div title="{{i[4]}}" class="interParam">{{i[4]}}</div></td><td  width="200px" class="interOption">{{i[5]}}</td><td class="interAuthor">{{i[7]}}</td><th>{{i[9]}}</th><td class="interResult">{{i[6]}}</td><td  class="interInputTime"><button name="iid" value="{{i[0]}}">删除</button><button name='rid' value="{{i[0]}}">执行</button><input id="editinter" name="editinter2" value="{{i[0]}}" class="btn" onclick="testbut();Show2();" title="编辑" /></td>
+<td class="interId">{{i[0]}}</td><td class="interMode">{{i[1]}}</td><th class="interDesc">{{i[8]}}</th><td class="interResult"  title="{{i[2]}}">{{i[2]}}</td><td class="interParam">{{i[3]}}</td><td><div title="{{i[4]}}" class="interParam">{{i[5]}}</div></td><td  width="200px" class="interOption">{{i[6]}}</td><td class="interAuthor">{{i[7]}}</td><th>{{i[9]}}</th><td class="interResult">{{i[4]}}</td><td  class="interInputTime"><button name="iid" value="{{i[0]}}">删除</button><button name='rid' value="{{i[0]}}">执行</button><input id="editinter" name="editinter2" value="{{i[0]}}" class="btn" onclick="testbut();Show2();" title="编辑" /></td>
 </tr>
 {% endfor %}
 </form>

@@ -5,6 +5,7 @@ from util.oper_interfacedb import Oper_sql
 import os
 from werkzeug.utils import secure_filename
 from util.read_Excel import *
+from run.req_interface.req_single import *
 
 app = Flask(__name__)
 
@@ -42,6 +43,29 @@ def upload():
 @app.route('/downloadfile',methods=['GET'])
 def download_file():
     return send_from_directory(r'D:\work_space\python_space\interface-test\interface-test\util\excel',filename='interfacedata.xlsx',as_attachment=True)
+
+@app.route('/delinterface',methods=['GET','POST'])
+def delinterface():
+    iid=request.args.get("iid")
+    rid=request.args.get("rid")
+    print("iid:",iid)
+    print("rid:" ,rid)
+    if iid !=None:
+        interface_sql.del_interfaceinfo(iid)
+    else:
+        data=interface_sql.sel_id_interfaceifo(rid)
+        parameter=data[5]
+        url=data[2]
+        method=data[6]
+        res=req_single(url,parameter,method)
+        print(res)
+    return interface()
+
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', debug=True, port="8888")
