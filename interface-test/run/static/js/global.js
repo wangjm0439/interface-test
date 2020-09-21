@@ -62,12 +62,12 @@ function testbut() {
         //var result3 = result2.toString().split(",");
         document.getElementById("editinter").value=result2[0];
         document.getElementById("emode").value=result2[1];
-        document.getElementById("eaddr").value=result2[2];
-        document.getElementById("eheader").value=result2[3];
-        document.getElementById("eparam").value=result2[4];
-        document.getElementById("eoption").value=result2[5];
-        document.getElementById("eauthor").value=result2[6];
-        document.getElementById("edesc").value=result2[7];
+        document.getElementById("edesc").value=result2[2];
+        document.getElementById("eaddr").value=result2[3];
+        document.getElementById("eheader").value=result2[4];
+        document.getElementById("eparam").value=result2[5];
+        document.getElementById("eoption").value=result2[6];
+        document.getElementById("eauthor").value=result2[7];
         document.getElementById("eresult").value=result2[8];
         document.getElementById("euserpwd").value=result2[9];
         }
