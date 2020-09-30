@@ -6,3 +6,7 @@ Mon, 03 Aug 2020 14:44:55-__main__-log.py-[line:46]-INFO-[日志信息]: 省市�
 Mon, 03 Aug 2020 14:44:55-__main__-log.py-[line:47]-WARNING-[日志信息]: I am a warning message
 Mon, 03 Aug 2020 14:44:55-__main__-log.py-[line:48]-ERROR-[日志信息]: I am a error message
 Mon, 03 Aug 2020 14:44:55-__main__-log.py-[line:49]-CRITICAL-[日志信息]: I am a critical message
+Mon, 28 Sep 2020 14:39:32-__main__-log.py-[line:46]-INFO-[日志信息]: 省市名称北京
+Mon, 28 Sep 2020 14:39:32-__main__-log.py-[line:47]-WARNING-[日志信息]: I am a warning message
+Mon, 28 Sep 2020 14:39:32-__main__-log.py-[line:48]-ERROR-[日志信息]: I am a error message
+Mon, 28 Sep 2020 14:39:32-__main__-log.py-[line:49]-CRITICAL-[日志信息]: I am a critical message

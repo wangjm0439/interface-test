@@ -8,6 +8,7 @@ from util.read_Excel import *
 from run.req_interface.req_single import *
 from util.order_status import *
 from run.req_interface.req_allrun import Req_allrun
+from log.log import Log
 import requests
 import json
 
@@ -20,7 +21,8 @@ allow_file = {'xlsx','xls'} #允许上传的文件类型
 interface_sql=Oper_sql()
 get_status=Get_order_status()
 req_allrun=Req_allrun()
-
+log=Log()
+#log.Logger.info("这个是日志输出")
 
 @app.route('/',methods=['GET'])
 def index():
@@ -28,8 +30,29 @@ def index():
     return render_template("index.html",result=(result,))
 @app.route('/interfaceList',methods=['GET'])
 def interface():
-    data=interface_sql.select_interfaceinfo()
-    return render_template('interfacelist.html',result=(data,))
+    try:
+        total_page=int(request.args.get("page"))
+    except:
+        total_page=1
+    if total_page>=1:
+        per_page_num=(total_page-1)*20 #每页最多显示20条记录，大于一页后从 页数*20条数开始显示最多20条记录
+    else:
+        per_page_num=0#如果只有一页，即显示从0开始显示最多20条记录
+    imode=request.args.get("interface")
+    author=request.args.get("author")
+    if imode==None:
+        imode=""
+    if author==None:
+        author=""
+    data = interface_sql.select_interfaceinfo(imode, author, per_page_num)
+    get_imode=interface_sql.get_imode()
+    get_author=interface_sql.get_author()
+    get_num=interface_sql.get_num()[0][0]
+    #log.Logger.info("总页数：%s,模块%s,作者%s,请求接口总条数：%s"%(total_page,imode,author,str(get_num)))
+    #log.Logger.info("模块展示：%s"%str(get_imode))
+    #log.Logger.info("作者展示：%s" %str(get_author))
+    print("模块，作者",imode,author)
+    return render_template('interfaceList.html',result=(data,total_page,get_num,get_imode,get_author))
 
 #文件类型判断
 def allow_file_type(filename):
@@ -43,7 +66,7 @@ def upload():
             filename=secure_filename(file.filename)
             file.save(os.path.join(app.config["UPLOAD_FOLDER"],filename))
             read_excel()
-            return "<html><p>导入成功</p><a href='interfaceList'>返回待请求接口列表</a></html>"
+            return "<html><p>导入成功</p></html>"
     return render_template('error.html', result=())
 
 @app.route('/downloadfile',methods=['GET'])
@@ -59,6 +82,7 @@ def delinterface():
     #print("rid:",rid)
     if iid != None:
         interface_sql.del_interfaceinfo(iid)
+        log.Logger.info("------ID为：%s请求数据已删除！"%iid)
         return "<html><p>删除完成</p><a href='interfaceList'>返回待请求接口列表</a></html>"
     else:
         #执行单个用例
@@ -67,18 +91,20 @@ def delinterface():
         url = data[2]
         method = data[6]
         res_data=req_single(url,parameter,method)#响应数据、响应码、响应时间
-        print(res_data)
+        #print(res_data)
         payOrderNo=json.loads(res_data[0].replace('\n','').replace('\t','').replace('\\',''))["data"]["payOrderNo"]
-        print("payOrderNo:",payOrderNo)#转化为字典格式并获取订单号
+        #print("payOrderNo:",payOrderNo)#转化为字典格式并获取订单号
         order_status=get_status.get_order_status(payOrderNo)#处理订单payOrderNo+1用于在paygw中查询订单状态
         expected=data[9]
-        print("expected:",expected)
-        print("order_status:",order_status)
+        #print("expected:",expected)
+        #print("order_status:",order_status)
         if order_status==expected:
             result='SUCCESS'
         else:
             result='FAIL'
-        print("result:",result)
+        #print("result:",result)
+        log.Logger.info("接口测试返回结果----%s"%res_data)
+        log.Logger.info("预期状态：%s,实际订单状态：%s,接口执行结果：%s"%(expected,order_status,result))
         interface_sql.insert_interfacerespond(data[1],data[2],data[5],res_data[0],res_data[1],res_data[2],data[8],result)
         return "<html><p>执行成功</p><a href='interfaceRespondList'>返回请求结果接口列表</a></html>"
 
@@ -95,7 +121,7 @@ def edit_page():
         #print(type(data),data)
         editId=data["editId"]
         editId_data=interface_sql.sel_id_interfaceinfo(editId)
-        print(editId_data)
+        #print(editId_data)
         return json.dumps({"msg":"ok","code":200,"data":editId_data})
 
 @app.route("/updateInterface",methods=["GET","POST"])
@@ -103,9 +129,8 @@ def updateInterface():
     '''编辑修改请求接口'''
     if request.method=='POST':
         try:
-            id=request.form["iid"]
+            id = request.form["iid"]
             intername=request.form["imode"]
-            #print(intername)
             descp=request.form["idesc"]
             interaddr=request.form["iaddr"]
             header=request.form["iheader"]
@@ -115,7 +140,7 @@ def updateInterface():
             expected = request.form["iresult"]
             account = request.form["iuserpwd"]
             interface_sql.update_interfaceinfo(id,intername,descp,interaddr,header,param,option,author,expected,account)
-
+            log.Logger.info("id：%s,修改接口完成！"%id)
         except:
             print("修改失败")
     return interface()
@@ -126,7 +151,6 @@ def addInterface():
     if request.method=='POST':
         try:
             intername = request.form["imode"]
-            print(intername)
             descp = request.form["idesc"]
             interaddr = request.form["iaddr"]
             header = request.form["iheader"]
@@ -135,9 +159,9 @@ def addInterface():
             author = request.form["iauthor"]
             expected = request.form["iresult"]
             account = request.form["iuserpwd"]
-            print(account)
             interface_sql.insert_interfaceinfo(intername, interaddr, header, param, option, author, descp, expected,
                                               account)
+            log.Logger.info("新增接口请求完成！")
             return "<html><p>添加成功</p><a href='interfaceList'>返回请求接口列表</a></html>"
         except:
             return "<html><p>添加失败</p><a href='interfaceList'>返回请求接口列表</a></html>"
@@ -147,6 +171,7 @@ def addInterface():
 @app.route("/runtest",methods=["GET","POST"])
 def runtest():
     req_allrun.req_allrun()
+    log.Logger.info("批量接口请求全部完成！")
     return "<html><p>全部执行完成</p><a href='interfaceRespondList'>返回请求结果接口列表</a></html>"
 
 

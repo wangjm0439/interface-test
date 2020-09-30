@@ -18,12 +18,40 @@ class Oper_sql:
         self.cursor.execute(sql)
         self.db.commit()
 
-    def select_interfaceinfo(self):
+    def select_interfaceinfo(self,imode,author,per_page_num=0):
         '''查询展示interfaceinfo'''
-        sql="select * from interfaceInfo"
+        sql="select * from interfaceInfo where intername like '%{0}%' and author like '%{1}%' ORDER BY id  desc  LIMIT {2},20"\
+            .format(imode,author,per_page_num)
         self.cursor.execute(sql)
         data=self.cursor.fetchall()
-        #print(len(data))
+        #print(data)
+        self.db.commit()
+        return data
+
+    def get_imode(self):
+        '''展示interface中有多少个不同的模块'''
+        sql = "select DISTINCT intername  from interfaceinfo"
+        self.cursor.execute(sql)
+        data = self.cursor.fetchall()
+        #print(data[0][0])
+        self.db.commit()
+        return data
+
+    def get_author(self):
+        '''获取interface中有不同的作者'''
+        sql = "SELECT DISTINCT author from interfaceinfo"
+        self.cursor.execute(sql)
+        data = self.cursor.fetchall()
+        # print(data[0][0])
+        self.db.commit()
+        return data
+
+    def get_num(self):
+        '''获取interface中请求接口条数'''
+        sql = "SELECT count(*) from interfaceinfo"
+        self.cursor.execute(sql)
+        data = self.cursor.fetchall()
+        #print(data)
         self.db.commit()
         return data
 
@@ -34,7 +62,7 @@ class Oper_sql:
         self.db.commit()
 
     def sel_id_interfaceinfo(self,id):
-        sql="select * from interfaceInfo where id='{0}'".format(id)
+        sql="select id,intername,descp,interaddr,header,param,`option`,author,expected,account from interfaceinfo where id='{0}'".format(id)
         self.cursor.execute(sql)
         data=self.cursor.fetchall()
         #print(data[0])
@@ -57,7 +85,7 @@ class Oper_sql:
 
     def update_interfaceinfo(self,id,intername,descp,interaddr,header,param,option,author,expected,account):
         '''编辑窗口更新数据'''
-        sql="update  interfaceinfo set intername='{1}',descp='{2}',interaddr='{3}',header='{4}',param='{5}',`option`='{6}',author='{7}',expected='{8}',account='{9}'  where id='{0}'".format(id,id,intername,descp,interaddr,header,param,option,author,expected,account)
+        sql="update  interfaceinfo set intername='{1}',descp='{2}',interaddr='{3}',header='{4}',param='{5}',`option`='{6}',author='{7}',expected='{8}',account='{9}'  where id='{0}'".format(id,intername,descp,interaddr,header,param,option,author,expected,account)
         self.cursor.execute(sql)
         self.db.commit()
         #print("data:",data)
@@ -66,11 +94,13 @@ class Oper_sql:
 if __name__=="__main__":
     a=Oper_sql()
     #a.del_interfaceinfo(23)
-    #a.sel_id_interfaceifo(29)
+    a.sel_id_interfaceinfo(97)
     #a.insert_interfacerespond("aa","aa","aa","aa","aa","0","aa","aa")
     #a.sel_edit_interfaceinfo(4)
     #a.update_interfaceinfo(5,"aa","aa","aa","aa","aa","aa","0","aa","aa")
-    a.select_interfaceinfo()
+    #a.select_interfaceinfo("","")
+    #a.get_imode()
+    #a.get_num()
 
 
 

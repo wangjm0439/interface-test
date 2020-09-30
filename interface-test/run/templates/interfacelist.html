@@ -43,13 +43,13 @@
 </datalist>
 开发者:<input list="namelist2" value="" name="author" autocomplete="off" />
 <datalist id="namelist2">
-{% for i in result[5] %}
+{% for i in result[4] %}
 <option>{{i[0]}}</option>
 {% endfor %}
 </datalist>
 跳转页数：<input name="page" value="" />
 <button>GO</button>
-<p style="display:inline">total: {{result[1]}} | totalpage: {{result[2]}}</p>
+<p style="display:inline">total: {{result[2]}} | totalpage: {{result[1]}}</p>
 </form>
 <form method="get" action="/runtest" style="display:inline">
 <input type="hidden" name="execut" value="" />
@@ -63,8 +63,8 @@
 <h2>新增</h2>
 <p>模块：<input list="modelist" name="imode" autocomplete="off" /></p>
 <datalist id="modelist">
-{% for i in result[6] %}
-<option>{{i}}</option>
+{% for i in result[3] %}
+<option>{{i[0]}}</option>
 {% endfor %}
 </datalist>
 <p>接口描述：<textarea name="idesc" rows="1" cols="55"></textarea></p>
@@ -84,8 +84,8 @@
 </p>
 <p>开发者：<input list="authorlist" name="iauthor" autocomplete="off"  /></p>
 <datalist id="authorlist">
-{% for i in result[8] %}
-<option>{{i}}</option>
+{% for i in result[4] %}
+<option>{{i[0]}}</option>
 {% endfor %}
 </datalist>
 <p>预期结果：<input name="iresult" /></p>
