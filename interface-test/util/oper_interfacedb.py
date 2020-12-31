@@ -90,17 +90,26 @@ class Oper_sql:
         self.db.commit()
         #print("data:",data)
 
+    def sel_interfaceinfo_data(self):
+        sql="select * from interfaceinfo "
+        self.cursor.execute(sql)
+        self.db.commit()
+        data=self.cursor.fetchall()
+        #print(len(data))
+        return data
+
 
 if __name__=="__main__":
     a=Oper_sql()
     #a.del_interfaceinfo(23)
-    a.sel_id_interfaceinfo(97)
+    #a.sel_id_interfaceinfo(97)
     #a.insert_interfacerespond("aa","aa","aa","aa","aa","0","aa","aa")
     #a.sel_edit_interfaceinfo(4)
     #a.update_interfaceinfo(5,"aa","aa","aa","aa","aa","aa","0","aa","aa")
     #a.select_interfaceinfo("","")
     #a.get_imode()
     #a.get_num()
+    a.sel_interfaceinfo_data()
 
 
 

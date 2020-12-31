@@ -13,7 +13,7 @@ class Req_allrun:
         self.testdb=Oper_testdb()
         self.get_status=Get_order_status()
     def req_allrun(self):
-        data=self.interfacedb.select_interfaceinfo()
+        data=self.interfacedb.sel_interfaceinfo_data()
         for i in range(len(data)):
 
             interaddr = data[i][2]
@@ -21,10 +21,14 @@ class Req_allrun:
             option = data[i][6]
             #print(interaddr,requestparam,option)
             res_data=req_single(interaddr, requestparam, option)#获取响应参数、状态码、接口响应时间
-            payOrderNo = json.loads(res_data[0].replace('\n', '').replace('\t', '').replace('\\', ''))["data"][
-                "payOrderNo"]
-            print("payOrderNo:", payOrderNo)  # 转化为字典格式并获取订单号
-            order_status = self.get_status.get_order_status(payOrderNo)  # 处理订单payOrderNo+1用于在paygw中查询订单状态
+            #print(res_data)
+            if "acctBalanceQry" in interaddr:
+                order_status = json.loads(res_data[0])["body"]["respCode"]
+            else:
+                payOrderNo = json.loads(res_data[0].replace('\n', '').replace('\t', '').replace('\\', ''))["data"][
+                    "payOrderNo"]
+                print("payOrderNo:", payOrderNo)  # 转化为字典格式并获取订单号
+                order_status = self.get_status.get_order_status(payOrderNo)  # 处理订单payOrderNo+1用于在paygw中查询订单状态
             expected = data[i][9]
             print("expected:", expected)
             print("order_status:", order_status)

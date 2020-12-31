@@ -41,8 +41,8 @@ class Oper_testdb:
 if __name__=="__main__":
     a=Oper_testdb()
     #a.paygw_sel_deduct_trans("022020091113544800000021")
-    #a.paygw_sel_withdraw("082020091117041100000008")
-    a.paygw_sel_depute_trans("012020091118020000000007")
+    a.paygw_sel_withdraw("082020122516022600000006")
+    #a.paygw_sel_depute_trans("012020091118020000000007")
 
 
 

@@ -66,7 +66,8 @@ def upload():
             filename=secure_filename(file.filename)
             file.save(os.path.join(app.config["UPLOAD_FOLDER"],filename))
             read_excel()
-            return "<html><p>导入成功</p></html>"
+            return "<html><p>导入成功</p><a href='/interfaceList'>返回待请求接口列表</a></html>"
+
     return render_template('error.html', result=())
 
 @app.route('/downloadfile',methods=['GET'])
@@ -87,25 +88,36 @@ def delinterface():
     else:
         #执行单个用例
         data = interface_sql.sel_id_interfaceinfo(rid)
+        #print("data",data)
         parameter = data[5]
-        url = data[2]
+        url = data[3]
         method = data[6]
+        #print("data:",parameter)
+        #print("url:",url)
+        #print(method)
         res_data=req_single(url,parameter,method)#响应数据、响应码、响应时间
-        #print(res_data)
-        payOrderNo=json.loads(res_data[0].replace('\n','').replace('\t','').replace('\\',''))["data"]["payOrderNo"]
-        #print("payOrderNo:",payOrderNo)#转化为字典格式并获取订单号
-        order_status=get_status.get_order_status(payOrderNo)#处理订单payOrderNo+1用于在paygw中查询订单状态
-        expected=data[9]
-        #print("expected:",expected)
+        print("响应参数：",res_data)
+        if "acctBalanceQry" in url:
+            order_status=json.loads(res_data[0])["body"]["respCode"]
+        else:
+            payOrderNo=json.loads(res_data[0].replace('\n','').replace('\t','').replace('\\',''))["data"]["payOrderNo"]
+            print("payOrderNo:",payOrderNo)#转化为字典格式并获取订单号
+            order_status=get_status.get_order_status(payOrderNo)#处理订单payOrderNo+1用于在paygw中查询订单状态
+
+        expected=data[8]
+        print("expected:",expected)
         #print("order_status:",order_status)
         if order_status==expected:
             result='SUCCESS'
         else:
             result='FAIL'
         #print("result:",result)
-        log.Logger.info("接口测试返回结果----%s"%res_data)
+        #print(type(res_data))
+        log.Logger.info("接口测试返回结果----%s"%(str(res_data)))
         log.Logger.info("预期状态：%s,实际订单状态：%s,接口执行结果：%s"%(expected,order_status,result))
-        interface_sql.insert_interfacerespond(data[1],data[2],data[5],res_data[0],res_data[1],res_data[2],data[8],result)
+        #intername,interaddr,requestparam,respondbody,code,respondtime,descp,result
+        print("data[2]",data[2])
+        interface_sql.insert_interfacerespond(data[1],data[3],data[5],res_data[0],res_data[1],res_data[2],data[2],result)
         return "<html><p>执行成功</p><a href='interfaceRespondList'>返回请求结果接口列表</a></html>"
 
 @app.route("/interfaceRespondList",methods=["GET","POST"])

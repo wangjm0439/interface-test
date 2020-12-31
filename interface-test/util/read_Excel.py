@@ -20,7 +20,7 @@ def read_excel():
         row_value=table.row_values(i)
         print(row_value)
         insert_data=Oper_sql()   #intername,interaddr,header,param,option,author, descp, expected, account
-        insert_data.insert_interfaceinfo(row_value[0],row_value[3],row_value[2],row_value[5],row_value[4],row_value[6],row_value[1],int(row_value[7]),row_value[8])
+        insert_data.insert_interfaceinfo(row_value[0],row_value[3],row_value[2],row_value[5],row_value[4],row_value[6],row_value[1],row_value[7],row_value[8])
 
 if __name__=="__main__":
     read_excel()

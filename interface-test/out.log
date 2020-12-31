@@ -2466,3 +2466,120 @@ Wed, 30 Sep 2020 11:18:02-log.log-run.py-[line:142]-INFO-[日志信息]: id：95
 Wed, 30 Sep 2020 11:18:14-log.log-run.py-[line:84]-INFO-[日志信息]: ------ID为：95请求数据已删除！
 Wed, 30 Sep 2020 11:18:14-log.log-run.py-[line:84]-INFO-[日志信息]: ------ID为：95请求数据已删除！
 Wed, 30 Sep 2020 13:51:22-log.log-run.py-[line:164]-INFO-[日志信息]: 新增接口请求完成！
+Fri, 09 Oct 2020 09:47:39-log.log-run.py-[line:85]-INFO-[日志信息]: ------ID为：94请求数据已删除！
+Fri, 09 Oct 2020 09:47:50-log.log-run.py-[line:85]-INFO-[日志信息]: ------ID为：25请求数据已删除！
+Fri, 09 Oct 2020 09:47:50-log.log-run.py-[line:85]-INFO-[日志信息]: ------ID为：25请求数据已删除！
+Mon, 14 Dec 2020 18:02:36-log.log-run.py-[line:110]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"16047119",\n\t\t"bizStatus":"SUCCESS",\n\t\t"outBizNo":"16047119",\n\t\t"payOrderNo":"022020121418030000000024",\n\t\t"respCode":"G000",\n\t\t"respMsg":"交易成功",\n\t\t"successAmt":2\n\t},\n\t"success":true\n}', 200, 1.84721)
+Mon, 14 Dec 2020 18:02:36-log.log-run.py-[line:111]-INFO-[日志信息]: 预期状态：{"username":"Demo001","passwd":"Test123456!"},实际订单状态：G002,接口执行结果：FAIL
+Mon, 14 Dec 2020 18:02:36-log.log-run.py-[line:111]-INFO-[日志信息]: 预期状态：{"username":"Demo001","passwd":"Test123456!"},实际订单状态：G002,接口执行结果：FAIL
+Mon, 14 Dec 2020 18:14:18-log.log-run.py-[line:110]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizStatus":"DOING",\n\t\t"capitalOrderNo":"082020121418144400000000",\n\t\t"outBizNo":"702376546",\n\t\t"payOrderNo":"082020121418144400000000"\n\t},\n\t"success":true\n}', 200, 0.284408)
+Mon, 14 Dec 2020 18:14:18-log.log-run.py-[line:110]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizStatus":"DOING",\n\t\t"capitalOrderNo":"082020121418144400000000",\n\t\t"outBizNo":"702376546",\n\t\t"payOrderNo":"082020121418144400000000"\n\t},\n\t"success":true\n}', 200, 0.284408)
+Mon, 14 Dec 2020 18:14:18-log.log-run.py-[line:110]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizStatus":"DOING",\n\t\t"capitalOrderNo":"082020121418144400000000",\n\t\t"outBizNo":"702376546",\n\t\t"payOrderNo":"082020121418144400000000"\n\t},\n\t"success":true\n}', 200, 0.284408)
+Mon, 14 Dec 2020 18:14:18-log.log-run.py-[line:111]-INFO-[日志信息]: 预期状态：{"username":"Demo001","passwd":"Test123456!"},实际订单状态：G001,接口执行结果：FAIL
+Mon, 14 Dec 2020 18:14:18-log.log-run.py-[line:111]-INFO-[日志信息]: 预期状态：{"username":"Demo001","passwd":"Test123456!"},实际订单状态：G001,接口执行结果：FAIL
+Mon, 14 Dec 2020 18:14:18-log.log-run.py-[line:111]-INFO-[日志信息]: 预期状态：{"username":"Demo001","passwd":"Test123456!"},实际订单状态：G001,接口执行结果：FAIL
+Mon, 14 Dec 2020 18:14:18-log.log-run.py-[line:111]-INFO-[日志信息]: 预期状态：{"username":"Demo001","passwd":"Test123456!"},实际订单状态：G001,接口执行结果：FAIL
+Thu, 24 Dec 2020 17:26:52-log.log-run.py-[line:114]-INFO-[日志信息]: 接口测试返回结果----('{"header":{"channelCode":"paycore","channelTransNo":"20200709000000022000","channelDateTime":"20200709173404","transCode":"acctBalanceQry","success":"true","errorCode":"","errorMsg":""},"body":{"bizStatus":"SUCCESS","respCode":"G000","respMsg":"交易成功","acctNo":"200604000008016001","rptDate":"","hisBalance":"","balance":"-297020318.44"}}', 200, 0.256708)
+Thu, 24 Dec 2020 17:26:52-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：{"user":"titi","password":"123456"},实际订单状态：G000,接口执行结果：FAIL
+Thu, 24 Dec 2020 17:26:52-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：{"user":"titi","password":"123456"},实际订单状态：G000,接口执行结果：FAIL
+Thu, 24 Dec 2020 17:30:36-log.log-run.py-[line:114]-INFO-[日志信息]: 接口测试返回结果----('{"header":{"channelCode":"paycore","channelTransNo":"20200709000000022000","channelDateTime":"20200709173404","transCode":"acctBalanceQry","success":"true","errorCode":"","errorMsg":""},"body":{"bizStatus":"SUCCESS","respCode":"G000","respMsg":"交易成功","acctNo":"200604000008016001","rptDate":"","hisBalance":"","balance":"-297020318.44"}}', 200, 0.218219)
+Thu, 24 Dec 2020 17:30:36-log.log-run.py-[line:114]-INFO-[日志信息]: 接口测试返回结果----('{"header":{"channelCode":"paycore","channelTransNo":"20200709000000022000","channelDateTime":"20200709173404","transCode":"acctBalanceQry","success":"true","errorCode":"","errorMsg":""},"body":{"bizStatus":"SUCCESS","respCode":"G000","respMsg":"交易成功","acctNo":"200604000008016001","rptDate":"","hisBalance":"","balance":"-297020318.44"}}', 200, 0.218219)
+Thu, 24 Dec 2020 17:30:36-log.log-run.py-[line:114]-INFO-[日志信息]: 接口测试返回结果----('{"header":{"channelCode":"paycore","channelTransNo":"20200709000000022000","channelDateTime":"20200709173404","transCode":"acctBalanceQry","success":"true","errorCode":"","errorMsg":""},"body":{"bizStatus":"SUCCESS","respCode":"G000","respMsg":"交易成功","acctNo":"200604000008016001","rptDate":"","hisBalance":"","balance":"-297020318.44"}}', 200, 0.218219)
+Thu, 24 Dec 2020 17:30:36-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：{"user":"titi","password":"123456"},实际订单状态：G000,接口执行结果：FAIL
+Thu, 24 Dec 2020 17:30:36-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：{"user":"titi","password":"123456"},实际订单状态：G000,接口执行结果：FAIL
+Thu, 24 Dec 2020 17:30:36-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：{"user":"titi","password":"123456"},实际订单状态：G000,接口执行结果：FAIL
+Thu, 24 Dec 2020 17:30:36-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：{"user":"titi","password":"123456"},实际订单状态：G000,接口执行结果：FAIL
+Thu, 24 Dec 2020 17:34:48-log.log-run.py-[line:114]-INFO-[日志信息]: 接口测试返回结果----('{"header":{"channelCode":"paycore","channelTransNo":"20200709000000022000","channelDateTime":"20200709173404","transCode":"acctBalanceQry","success":"true","errorCode":"","errorMsg":""},"body":{"bizStatus":"SUCCESS","respCode":"G000","respMsg":"交易成功","acctNo":"200604000008016001","rptDate":"","hisBalance":"","balance":"-297020318.44"}}', 200, 0.218422)
+Thu, 24 Dec 2020 17:34:48-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Thu, 24 Dec 2020 17:34:48-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Thu, 24 Dec 2020 17:43:55-log.log-run.py-[line:114]-INFO-[日志信息]: 接口测试返回结果----('{"header":{"channelCode":"paycore","channelTransNo":"20200709000000022000","channelDateTime":"20200709173404","transCode":"acctBalanceQry","success":"true","errorCode":"","errorMsg":""},"body":{"bizStatus":"SUCCESS","respCode":"G000","respMsg":"交易成功","acctNo":"200604000008016001","rptDate":"","hisBalance":"","balance":"-297020318.44"}}', 200, 0.26943)
+Thu, 24 Dec 2020 17:43:55-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Thu, 24 Dec 2020 17:43:55-log.log-run.py-[line:115]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Thu, 24 Dec 2020 17:45:42-log.log-run.py-[line:115]-INFO-[日志信息]: 接口测试返回结果----('{"header":{"channelCode":"paycore","channelTransNo":"20200709000000022000","channelDateTime":"20200709173404","transCode":"acctBalanceQry","success":"true","errorCode":"","errorMsg":""},"body":{"bizStatus":"SUCCESS","respCode":"G000","respMsg":"交易成功","acctNo":"200604000008016001","rptDate":"","hisBalance":"","balance":"-297020318.44"}}', 200, 0.224856)
+Thu, 24 Dec 2020 17:45:42-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Thu, 24 Dec 2020 17:45:42-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 10:29:40-log.log-run.py-[line:115]-INFO-[日志信息]: 接口测试返回结果----('{"header":{"channelCode":"paycore","channelTransNo":"20200709000000022000","channelDateTime":"20200709173404","transCode":"acctBalanceQry","success":"true","errorCode":"","errorMsg":""},"body":{"bizStatus":"SUCCESS","respCode":"G000","respMsg":"交易成功","acctNo":"200604000008016001","rptDate":"","hisBalance":"","balance":"-297020318.44"}}', 200, 0.229084)
+Fri, 25 Dec 2020 10:29:40-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 10:29:40-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 11:19:23-log.log-run.py-[line:115]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizStatus":"DOING",\n\t\t"capitalOrderNo":"082020122511201200000000",\n\t\t"outBizNo":"795416196",\n\t\t"payOrderNo":"082020122511201200000000"\n\t},\n\t"success":true\n}', 200, 0.063293)
+Fri, 25 Dec 2020 11:19:23-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 11:19:23-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 16:46:03-log.log-run.py-[line:115]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizStatus":"DOING",\n\t\t"capitalOrderNo":"082020122516465300000007",\n\t\t"outBizNo":"949292713",\n\t\t"payOrderNo":"082020122516465300000007"\n\t},\n\t"success":true\n}', 200, 0.016116)
+Fri, 25 Dec 2020 16:46:03-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 16:46:03-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 16:49:28-log.log-run.py-[line:115]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizStatus":"DOING",\n\t\t"capitalOrderNo":"082020122516501800000008",\n\t\t"outBizNo":"41357405",\n\t\t"payOrderNo":"082020122516501800000008"\n\t},\n\t"success":true\n}', 200, 0.013287)
+Fri, 25 Dec 2020 16:49:28-log.log-run.py-[line:115]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizStatus":"DOING",\n\t\t"capitalOrderNo":"082020122516501800000008",\n\t\t"outBizNo":"41357405",\n\t\t"payOrderNo":"082020122516501800000008"\n\t},\n\t"success":true\n}', 200, 0.013287)
+Fri, 25 Dec 2020 16:49:28-log.log-run.py-[line:115]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizStatus":"DOING",\n\t\t"capitalOrderNo":"082020122516501800000008",\n\t\t"outBizNo":"41357405",\n\t\t"payOrderNo":"082020122516501800000008"\n\t},\n\t"success":true\n}', 200, 0.013287)
+Fri, 25 Dec 2020 16:49:28-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 16:49:28-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 16:49:28-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Fri, 25 Dec 2020 16:49:28-log.log-run.py-[line:116]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G000,接口执行结果：SUCCESS
+Mon, 28 Dec 2020 14:03:35-log.log-run.py-[line:185]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:04:38-log.log-run.py-[line:85]-INFO-[日志信息]: ------ID为：106请求数据已删除！
+Mon, 28 Dec 2020 15:13:00-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：116请求数据已删除！
+Mon, 28 Dec 2020 15:13:10-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：105请求数据已删除！
+Mon, 28 Dec 2020 15:13:10-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：105请求数据已删除！
+Mon, 28 Dec 2020 15:13:16-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：115请求数据已删除！
+Mon, 28 Dec 2020 15:13:16-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：115请求数据已删除！
+Mon, 28 Dec 2020 15:13:16-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：115请求数据已删除！
+Mon, 28 Dec 2020 15:13:21-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：114请求数据已删除！
+Mon, 28 Dec 2020 15:13:21-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：114请求数据已删除！
+Mon, 28 Dec 2020 15:13:21-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：114请求数据已删除！
+Mon, 28 Dec 2020 15:13:21-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：114请求数据已删除！
+Mon, 28 Dec 2020 15:13:26-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：113请求数据已删除！
+Mon, 28 Dec 2020 15:13:26-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：113请求数据已删除！
+Mon, 28 Dec 2020 15:13:26-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：113请求数据已删除！
+Mon, 28 Dec 2020 15:13:26-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：113请求数据已删除！
+Mon, 28 Dec 2020 15:13:26-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：113请求数据已删除！
+Mon, 28 Dec 2020 15:13:34-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：112请求数据已删除！
+Mon, 28 Dec 2020 15:13:34-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：112请求数据已删除！
+Mon, 28 Dec 2020 15:13:34-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：112请求数据已删除！
+Mon, 28 Dec 2020 15:13:34-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：112请求数据已删除！
+Mon, 28 Dec 2020 15:13:34-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：112请求数据已删除！
+Mon, 28 Dec 2020 15:13:34-log.log-run.py-[line:86]-INFO-[日志信息]: ------ID为：112请求数据已删除！
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"849581266",\n\t\t"payOrderNo":"012020122815144100000000",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.031026)
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"849581266",\n\t\t"payOrderNo":"012020122815144100000000",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.031026)
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"849581266",\n\t\t"payOrderNo":"012020122815144100000000",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.031026)
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"849581266",\n\t\t"payOrderNo":"012020122815144100000000",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.031026)
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"849581266",\n\t\t"payOrderNo":"012020122815144100000000",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.031026)
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"849581266",\n\t\t"payOrderNo":"012020122815144100000000",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.031026)
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"849581266",\n\t\t"payOrderNo":"012020122815144100000000",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.031026)
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:14:29-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"658613509",\n\t\t"payOrderNo":"012020122815372300000008",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.014359)
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"658613509",\n\t\t"payOrderNo":"012020122815372300000008",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.014359)
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"658613509",\n\t\t"payOrderNo":"012020122815372300000008",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.014359)
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"658613509",\n\t\t"payOrderNo":"012020122815372300000008",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.014359)
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"658613509",\n\t\t"payOrderNo":"012020122815372300000008",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.014359)
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"658613509",\n\t\t"payOrderNo":"012020122815372300000008",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.014359)
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"658613509",\n\t\t"payOrderNo":"012020122815372300000008",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.014359)
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"658613509",\n\t\t"payOrderNo":"012020122815372300000008",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.014359)
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:116]-INFO-[日志信息]: 接口测试返回结果----('{\n\t"data":{\n\t\t"bizOrderNo":"5453242000000",\n\t\t"bizStatus":"DOING",\n\t\t"outBizNo":"658613509",\n\t\t"payOrderNo":"012020122815372300000008",\n\t\t"successAmt":0\n\t},\n\t"success":true\n}', 200, 0.014359)
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:37:11-log.log-run.py-[line:117]-INFO-[日志信息]: 预期状态：G000,实际订单状态：G001,接口执行结果：FAIL
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Mon, 28 Dec 2020 15:50:05-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
+Tue, 29 Dec 2020 15:22:27-log.log-run.py-[line:186]-INFO-[日志信息]: 批量接口请求全部完成！
