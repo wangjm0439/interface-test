@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db878878-fb3c-4f22-aaa9-f22f627a784a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/run/uploads/interfacedata.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/get_log.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/db.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/config/db.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.log" beforeDir="false" afterPath="$PROJECT_DIR$/out.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/req_interface/req_allrun.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/req_interface/req_allrun.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/static/js/date01.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/excel/interfacedata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/util/excel/interfacedata.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/oper_interfacedb.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/oper_interfacedb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/oper_interfacerespond.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/req_interface/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/oper_testdb.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/oper_testdb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/read_Excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/read_Excel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myPerformance" beforeDir="false" afterPath="$PROJECT_DIR$/../myPerformance" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -162,7 +148,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="JupyterTrust" id="ca1ef6ec-d4c6-4620-b59e-3bf851718af9" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="32" />
     <option name="y" value="75" />
     <option name="width" value="1380" />
